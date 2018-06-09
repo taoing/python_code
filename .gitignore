@@ -1,0 +1,15 @@
+# C extensions
+*.so
+
+# Packages
+__pycache__
+
+
+# Virtual environment
+venv
+
+# others
+.idea
+test*
+test
+shell.txt
