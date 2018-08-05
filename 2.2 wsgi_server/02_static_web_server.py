@@ -26,11 +26,11 @@ class HTTPServer(object):
         print(request_data)
         '''解析请求返回响应'''
         # 请求行
-        reuqestmethodline = request_data.split('\r\n')[0]
+        requestmethodline = request_data.split('\r\n')[0]
         # 请求方法
-        requestmethod = reuqestmethodline.split(' ', 1)[0]
+        requestmethod = requestmethodline.split(' ', 1)[0]
         # 请求资源
-        requestpath = re.match(r'\w+\s+(/[a-zA-Z0-9\_\.]*)',reuqestmethodline).group(1)
+        requestpath = re.match(r'\w+\s+(/[a-zA-Z0-9\_\.]*)',requestmethodline).group(1)
         if requestmethod == 'GET':
             if requestpath == '/':
                 getfilename = 'index.html'
